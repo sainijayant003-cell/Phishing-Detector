@@ -1,0 +1,260 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wrapper {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 16px;
+  transition: border-color var(--duration-fast) var(--ease-unslop);
+}
+
+.wrapper:focus-within {
+  border-color: var(--border-mid);
+}
+
+.modeBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.modeTabs {
+  display: flex;
+  background: var(--bg-base);
+  padding: 2px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-dim);
+  gap: 2px;
+}
+
+.modeBtn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12px;
+  padding: 5px 12px;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-unslop);
+}
+
+.modeBtnActive {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  box-shadow: var(--btn-top-highlight);
+  font-weight: 500;
+}
+
+.modeHint {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.quickSamples {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.quickLabel {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.demoPill {
+  background: var(--bg-base);
+  border: 1px solid var(--border-dim);
+  color: var(--text-secondary);
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-unslop);
+}
+
+.demoPill:hover {
+  background: var(--bg-elevated);
+  color: var(--text-primary);
+  border-color: var(--border-mid);
+}
+
+.inputWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.urlinput, .textarea {
+  width: 100%;
+  background: var(--bg-base);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  color: var(--text-primary);
+  font-size: 13px;
+  line-height: 1.5;
+  box-sizing: border-box;
+  transition: border-color var(--duration-fast) var(--ease-unslop);
+}
+
+.urlinput:focus, .textarea:focus {
+  outline: none;
+  border-color: var(--border-focus);
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.inputFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.charCount {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+/* Primary Action Button (Unslop Pass 2: off-white from ramp with dark text, or accent) */
+.scanBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--text-primary);
+  color: var(--bg-base);
+  font-size: 13px;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: opacity var(--duration-fast) var(--ease-unslop);
+}
+
+.scanBtn:hover:not(:disabled) {
+  opacity: 0.92;
+}
+
+.scanBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-top-color: var(--bg-base);
+  border-radius: 50%;
+  animation: spin 700ms linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Heuristic Pre-scan Box */
+.dissectorBox {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 14px;
+}
+
+.dissectorHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.dissectorTitle {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.entropyBadge {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.entropyVal {
+  color: var(--text-primary);
+  font-feature-settings: 'tnum' 1;
+}
+
+.dissectorGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.telemetryCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+}
+
+.telLabel {
+  display: block;
+  font-size: 10px;
+  color: var(--text-dim);
+  margin-bottom: 2px;
+}
+
+.telemetryCard strong {
+  font-size: 12px;
+  font-weight: 500;
+  font-feature-settings: 'tnum' 1;
+}
+
+.flagsRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+}
+
+.flagsLabel {
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.flagsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.flagChip {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  color: var(--text-secondary);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-size: 11px;
+}
+
+@media (max-width: 640px) {
+  .dissectorGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

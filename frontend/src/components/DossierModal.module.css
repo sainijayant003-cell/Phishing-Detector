@@ -1,0 +1,241 @@
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.modal {
+  width: 100%;
+  max-width: 640px;
+  max-height: 85vh;
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  animation: enter 160ms var(--ease-unslop);
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--border-dim);
+  background: var(--bg-surface);
+}
+
+.headerBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+
+.closeBtn {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.closeBtn:hover {
+  color: var(--text-primary);
+}
+
+.body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  color: var(--text-secondary);
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.metaLabel {
+  display: block;
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 2px;
+}
+
+.metaValue {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-feature-settings: 'tnum' 1;
+}
+
+.targetBox {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 10px 12px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.targetCode {
+  display: block;
+  font-size: 12px;
+  color: var(--text-primary);
+  word-break: break-all;
+  margin-top: 3px;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+.section h3 {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.signalList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.signalItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 8px 10px;
+  border-radius: var(--radius-xs);
+  color: var(--text-secondary);
+}
+
+.signalClean {
+  font-size: 12px;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 8px 10px;
+  border-radius: var(--radius-xs);
+  color: var(--text-dim);
+}
+
+.signalDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-amber);
+  flex-shrink: 0;
+}
+
+.mitreGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 8px;
+}
+
+.mitreCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 8px 10px;
+  border-radius: var(--radius-xs);
+  font-size: 11px;
+}
+
+.mitreCard strong {
+  display: block;
+  color: var(--text-primary);
+  margin-bottom: 2px;
+}
+
+.remediationText {
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 10px 12px;
+  border-radius: var(--radius-xs);
+  margin: 0;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  padding: 12px 18px;
+  background: var(--bg-surface);
+  border-top: 1px solid var(--border-dim);
+}
+
+.copyBtn, .printBtn {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--duration-fast) ease;
+}
+
+.copyBtn {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border-dim);
+  color: var(--text-primary);
+}
+
+.copyBtn:hover {
+  background: var(--bg-card);
+  border-color: var(--border-mid);
+}
+
+.printBtn {
+  background: var(--text-primary);
+  color: var(--bg-base);
+  border: none;
+}
+
+.printBtn:hover {
+  opacity: 0.92;
+}
+
+@media (max-width: 600px) {
+  .metaGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

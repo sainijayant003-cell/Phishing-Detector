@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+/* ==========================================================================
+   UNSLOP DESIGN SYSTEM — PhishGuard
+   Derived from heydamir/unslop (CC BY 4.0 by Damir Sokolovsky)
+   Craft-first: quiet chrome, 4px scale, hairline borders, one accent
+   ========================================================================== */
+
+:root,
+:root[data-theme="unslop"],
+:root[data-theme="unslop-dark"] {
+  color-scheme: dark;
+
+  /* Neutral Ramp: Graphite */
+  --bg-sidebar: #0f0f10;
+  --bg-base: #141415;
+  --bg-surface: #19191b;
+  --bg-card: #19191b;
+  --bg-elevated: #232325;
+  --bg-input: #19191b;
+
+  /* Hairlines: Primary text at 8% */
+  --border-dim: rgba(237, 237, 237, 0.08);
+  --border-mid: rgba(237, 237, 237, 0.14);
+  --border-focus: rgba(237, 237, 237, 0.3);
+
+  /* Text Roles */
+  --text-primary: #ededed;
+  --text-secondary: #a1a1a6;
+  --text-dim: #85858b;
+
+  /* Accent: Controlled cobalt */
+  --accent-primary: #3b82f6;
+  --accent-primary-hover: #2563eb;
+  --accent-cyan: #38bdf8;
+
+  /* Semantic Colors (toned to sit quietly inside the ramp) */
+  --accent-green: #4cc38a;
+  --accent-red: #e5484d;
+  --accent-amber: #f59e0b;
+
+  /* Highlights & Shadows */
+  --btn-top-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  --theme-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  --theme-glow: transparent;
+
+  /* Fonts */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', 'DM Mono', monospace;
+
+  /* 4px Scale Radii: Nested inner = outer - padding */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 18px;
+
+  /* Motion */
+  --ease-unslop: cubic-bezier(0.22, 1, 0.36, 1);
+  --duration-fast: 140ms;
+  --duration-base: 220ms;
+}
+
+:root[data-theme="unslop-ink"] {
+  color-scheme: dark;
+
+  /* Neutral Ramp: Ink (Deep Technical Navy) */
+  --bg-sidebar: #07080d;
+  --bg-base: #0b0d14;
+  --bg-surface: #11141c;
+  --bg-card: #11141c;
+  --bg-elevated: #1a1e28;
+  --bg-input: #11141c;
+
+  --border-dim: rgba(238, 240, 245, 0.08);
+  --border-mid: rgba(238, 240, 245, 0.14);
+  --border-focus: rgba(238, 240, 245, 0.3);
+
+  --text-primary: #eef0f5;
+  --text-secondary: #a3a9b8;
+  --text-dim: #7a8296;
+
+  --accent-primary: #38bdf8;
+  --accent-primary-hover: #0ea5e9;
+  --accent-cyan: #38bdf8;
+
+  --accent-green: #4cc38a;
+  --accent-red: #e5484d;
+  --accent-amber: #f59e0b;
+
+  --btn-top-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  --theme-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --theme-glow: transparent;
+}
+
+:root[data-theme="unslop-light"] {
+  color-scheme: light;
+
+  /* Neutral Ramp: Light Graphite */
+  --bg-sidebar: #f5f5f6;
+  --bg-base: #fafafa;
+  --bg-surface: #ffffff;
+  --bg-card: #ffffff;
+  --bg-elevated: #f4f4f5;
+  --bg-input: #ffffff;
+
+  --border-dim: rgba(23, 23, 23, 0.08);
+  --border-mid: rgba(23, 23, 23, 0.14);
+  --border-focus: rgba(23, 23, 23, 0.3);
+
+  --text-primary: #171717;
+  --text-secondary: #525252;
+  --text-dim: #737373;
+
+  --accent-primary: #2563eb;
+  --accent-primary-hover: #1d4ed8;
+  --accent-cyan: #0284c7;
+
+  --accent-green: #16a34a;
+  --accent-red: #dc2626;
+  --accent-amber: #d97706;
+
+  --btn-top-highlight: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  --theme-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --theme-glow: transparent;
+}
+
+/* Retro & Cyberpunk Theme Variants (preserved for versatility) */
+:root[data-theme="cyberpunk-neon"] {
+  color-scheme: dark;
+  --bg-sidebar: #0b0b14;
+  --bg-base: #0a0a12;
+  --bg-surface: #10101c;
+  --bg-card: #121220;
+  --bg-elevated: #181829;
+  --bg-input: #090910;
+  --accent-primary: #00f0ff;
+  --accent-cyan: #00f0ff;
+  --accent-green: #00ff66;
+  --accent-red: #ff0055;
+  --accent-amber: #fcee0a;
+  --text-primary: #f0f6fc;
+  --text-secondary: #a2a8d3;
+  --text-dim: #6c739c;
+  --border-dim: #262447;
+  --border-mid: #413d75;
+  --border-focus: #00f0ff;
+  --btn-top-highlight: none;
+  --theme-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  --theme-glow: rgba(0, 240, 255, 0.15);
+}
+
+:root[data-theme="hacker-green"] {
+  color-scheme: dark;
+  --bg-sidebar: #060d09;
+  --bg-base: #050907;
+  --bg-surface: #0a110d;
+  --bg-card: #0b140e;
+  --bg-elevated: #101a13;
+  --bg-input: #07100a;
+  --accent-primary: #39ff88;
+  --accent-cyan: #39ff88;
+  --accent-green: #39ff88;
+  --accent-red: #ff5268;
+  --accent-amber: #d5f56b;
+  --text-primary: #dcffe7;
+  --text-secondary: #91bba0;
+  --text-dim: #5c866a;
+  --border-dim: #203d2a;
+  --border-mid: #326543;
+  --border-focus: #39ff88;
+  --btn-top-highlight: none;
+  --theme-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+  --theme-glow: rgba(57, 255, 136, 0.1);
+}
+
+:root[data-theme="cyber-blue"] {
+  color-scheme: dark;
+  --bg-sidebar: #091525;
+  --bg-base: #07111f;
+  --bg-surface: #0c192b;
+  --bg-card: #0f1f33;
+  --bg-elevated: #122238;
+  --bg-input: #091727;
+  --accent-primary: #22d3ee;
+  --accent-cyan: #22d3ee;
+  --accent-green: #34d399;
+  --accent-red: #fb7185;
+  --accent-amber: #fbbf24;
+  --text-primary: #e6f1ff;
+  --text-secondary: #9aafc7;
+  --text-dim: #71869f;
+  --border-dim: #1b3048;
+  --border-mid: #2b4965;
+  --border-focus: #22d3ee;
+  --btn-top-highlight: none;
+  --theme-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  --theme-glow: rgba(34, 211, 238, 0.12);
+}
+
+/* ==========================================================================
+   Base Elements
+   ========================================================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 320px;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  background: var(--bg-base);
+  color: var(--text-primary);
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-base);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body, button, input, textarea, select {
+  font-family: var(--font-sans);
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+}
+
+code, pre, .mono, [data-mono] {
+  font-family: var(--font-mono);
+  font-feature-settings: 'tnum' 1;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input, textarea, select {
+  font-size: inherit;
+  color: var(--text-primary);
+  background: var(--bg-input);
+}
+
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: rgba(59, 130, 246, 0.25);
+  color: #ffffff;
+}
+
+/* Tabular figures for numbers */
+.tabular-nums {
+  font-feature-settings: 'tnum' 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

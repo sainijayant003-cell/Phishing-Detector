@@ -1,0 +1,282 @@
+.card {
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin-top: 20px;
+  background: var(--bg-surface);
+  position: relative;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.verdictTitle {
+  display: block;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.targetSub {
+  display: block;
+  font-size: 12px;
+  color: var(--text-dim);
+  margin-top: 3px;
+}
+
+.targetSub code {
+  color: var(--text-primary);
+  background: var(--bg-base);
+  border: 1px solid var(--border-dim);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  font-size: 11px;
+}
+
+.scanIdTag {
+  font-size: 11px;
+  background: var(--bg-base);
+  border: 1px solid var(--border-dim);
+  padding: 3px 8px;
+  border-radius: var(--radius-xs);
+  color: var(--text-dim);
+}
+
+.pieScoreSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: var(--bg-base);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 18px;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+}
+
+.mainScorePie {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+}
+
+.pieDetailsCol {
+  flex: 1;
+  min-width: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hudCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+}
+
+.hudLabel {
+  display: block;
+  font-size: 11px;
+  color: var(--text-dim);
+  margin-bottom: 4px;
+}
+
+.hudValRow {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.hudVal {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-primary);
+  font-feature-settings: 'tnum' 1;
+}
+
+.hudFoot {
+  font-size: 11px;
+  color: var(--text-dim);
+}
+
+.breakdownPieBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  flex: 0 0 auto;
+}
+
+.breakdownTitle {
+  font-size: 11px;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.miniLegend {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 10px;
+  margin-top: 6px;
+}
+
+.explanationBox {
+  background: var(--bg-base);
+  border: 1px solid var(--border-dim);
+  border-left: 3px solid var(--accent-primary);
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  margin-bottom: 16px;
+}
+
+.explanationText {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.explanationText strong {
+  color: var(--text-primary);
+  font-weight: 500;
+  margin-right: 6px;
+}
+
+.signalsSection {
+  margin-bottom: 18px;
+}
+
+.signalsHeader {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.signalsGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.signalBadge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--bg-base);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.signalDot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--accent-amber);
+  flex-shrink: 0;
+}
+
+.actionsBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border-dim);
+}
+
+.actionLeft {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.dossierBtn, .sandboxBtn, .jsonToggleBtn {
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all var(--duration-fast) var(--ease-unslop);
+}
+
+.dossierBtn {
+  background: var(--text-primary);
+  color: var(--bg-base);
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.dossierBtn:hover {
+  opacity: 0.92;
+}
+
+.sandboxBtn {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-dim);
+  box-shadow: var(--btn-top-highlight);
+  color: var(--text-primary);
+}
+
+.sandboxBtn:hover {
+  background: var(--bg-elevated);
+  border-color: var(--border-mid);
+}
+
+.jsonToggleBtn {
+  background: transparent;
+  border: 1px solid var(--border-dim);
+  color: var(--text-dim);
+}
+
+.jsonToggleBtn:hover {
+  color: var(--text-primary);
+  border-color: var(--border-mid);
+}
+
+.rawJsonBox {
+  margin-top: 14px;
+  background: var(--bg-base);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 12px;
+  overflow-x: auto;
+}
+
+.rawJsonBox pre {
+  margin: 0;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-secondary);
+}
